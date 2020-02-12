@@ -33,7 +33,7 @@ homeBanner.addEventListener(('mouseout'), e => {
 
 letsGo.addEventListener(('dblclick'), e => {
     letsGo.style.color = 'pink';
-    letsGo.style.fontWeight = 'bold';
+   
 })
 
 navi.addEventListener('scroll', e => {
@@ -56,6 +56,13 @@ footerBar.addEventListener('click', e => {
 document.addEventListener('keyup', e => {
     console.log('key')
     letsGo.style.color = 'red';
+    e.stopPropagation();
+})
+
+document.addEventListener('keyup', e => {
+    console.log('key')
+    letsGo.style.color = 'blue';
+    
 })
 
 document.addEventListener('keydown', e => {
@@ -67,3 +74,12 @@ document.addEventListener('wheel', e => {
     console.log('wheel rotated')
     e.target.style.color = 'orange';
 })
+
+
+document.querySelectorAll('a').forEach(e => {
+    e.addEventListener('click', () => {
+      e.preventDefault();
+    })
+  })
+
+
