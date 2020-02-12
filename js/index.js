@@ -32,12 +32,13 @@ homeBanner.addEventListener(('mouseout'), e => {
 })
 
 letsGo.addEventListener(('dblclick'), e => {
-    letsGo.style.color = 'palevioletred';
+    letsGo.style.color = 'pink';
     letsGo.style.fontWeight = 'bold';
 })
 
-document.addEventListener('scroll', e => {
+navi.addEventListener('scroll', e => {
     console.log('the user scrolled')
+    navi.style.color= 'blue';
 })
 
 window.addEventListener('resize', e => {
@@ -45,21 +46,24 @@ window.addEventListener('resize', e => {
 })
 
 document.addEventListener('copy', e => {
-    e.target.style.color = 'gray';
+    e.target.style.color = 'green';
 })
 
 footerBar.addEventListener('click', e => {
     e.target.style['background-color'] = 'lightblue'
 })
 
-document.addEventListener('drag', e => {
-    console.log('dragged')
+document.addEventListener('keyup', e => {
+    console.log('key')
+    letsGo.style.color = 'red';
 })
 
 document.addEventListener('keydown', e => {
     console.log(e.key)
+    e.target.style['background-color'] = 'hotpink';
 })
 
 document.addEventListener('wheel', e => {
     console.log('wheel rotated')
+    e.target.style.color = 'orange';
 })
